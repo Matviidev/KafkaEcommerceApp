@@ -1,0 +1,23 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: order-service
+    static_configs:
+      - targets: ['order-service:3001']
+
+  - job_name: payment-service
+    static_configs:
+      - targets: ['payment-service:3002']
+
+  - job_name: delivery-service
+    static_configs:
+      - targets: ['delivery-service:3003']
+
+  - job_name: analytics-service
+    static_configs:
+      - targets: ['analytics-service:3004']
+
+  - job_name: search-service
+    static_configs:
+      - targets: ['search-service:3005']
